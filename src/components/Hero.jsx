@@ -26,7 +26,7 @@ export default function App() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-100 to-purple-200 flex items-center justify-center px-4">
             <div className="bg-white p-8 rounded-2xl shadow-lg w-full max-w-xl">
-                <h1 className="text-4xl font-bold text-center mb-6 text-purple-700">To-Do List</h1>
+                <h1 className="text-4xl font-bold text-center mb-6 text-black">To-Do List</h1>
 
                 <form onSubmit={addTask} className="flex gap-2 mb-6">
                     <input
@@ -34,11 +34,11 @@ export default function App() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Add a task..."
-                        className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        className="p-3 rounded-xl border border-gray-300 w-full focus:outline-none focus:ring-1 focus:ring-black"
                     />
                     <button
                         type="submit"
-                        className="bg-purple-600 text-white px-5 py-2.5 rounded-xl hover:bg-purple-700 transition"
+                        className="text-black border border-black px-5 py-2.5 rounded-xl bg-transparent hover:bg-black hover:text-white transition-all duration-300 ease-in-out cursor-pointer shadow-sm hover:shadow-md"
                     >
                         Add
                     </button>
