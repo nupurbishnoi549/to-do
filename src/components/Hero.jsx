@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function App() {
+ function App() {
     const [tasks, setTasks] = useState(() => {
         const saved = localStorage.getItem("userTodoData");
         return saved ? JSON.parse(saved) : [];
@@ -17,12 +17,6 @@ export default function App() {
             setTasks([...tasks, { text: input.trim(), done: false }]);
             setInput("");
         }
-    };
-
-    const toggleDone = (index) => {
-        const updated = [...tasks];
-        updated[index].done = !updated[index].done;
-        setTasks(updated);
     };
 
     const deleteTask = (index) => {
@@ -60,4 +54,5 @@ export default function App() {
                 </div>
         </div>
     );
-}
+ }
+export default App
